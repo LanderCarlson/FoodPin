@@ -68,7 +68,11 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         headerView.heartImageView.isHidden = (restaurant.isVisited) ? false : true
         tableView.delegate = self
         tableView.dataSource = self
-        
+        tableView.separatorStyle = .none
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.tintColor = .white
+        tableView.contentInsetAdjustmentBehavior = .never
     }
     
 
