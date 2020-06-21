@@ -45,7 +45,7 @@ class RestaurantTableViewController: UITableViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
-        if let customFont = UIFont(name: "Rubik-Medium", size: 40.0) {
+        if let customFont = UIFont(name: "xRubik-Medium", size: 40.0) {
         navigationController?.navigationBar.largeTitleTextAttributes = [ NSAttributedString.Key.foregroundColor: UIColor(red: 231.0/255.0, green: 76.0/255.0, blue: 60.0/255.0, alpha: 1.0), NSAttributedString.Key.font: customFont ]
         }
     }
