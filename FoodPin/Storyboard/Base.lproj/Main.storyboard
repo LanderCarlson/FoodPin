@@ -100,7 +100,9 @@
                             <outlet property="delegate" destination="iRD-QU-zyJ" id="itl-l7-TdG"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="FoodPin" id="vsb-U7-BqU"/>
+                    <navigationItem key="navigationItem" title="FoodPin" id="vsb-U7-BqU">
+                        <barButtonItem key="backBarButtonItem" title=" " id="0tQ-3q-l0C"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oAP-f4-g1X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -272,10 +274,10 @@
             </objects>
             <point key="canvasLocation" x="1486.9565217391305" y="-90.401785714285708"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--NavigationController-->
         <scene sceneID="xiN-LS-FKX">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="I3r-5v-37i" sceneMemberID="viewController">
+                <navigationController title="NavigationController" automaticallyAdjustsScrollViewInsets="NO" interfaceStyle="light" id="I3r-5v-37i" userLabel="NavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zUQ-UZ-1HH">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

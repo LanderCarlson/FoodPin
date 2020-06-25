@@ -8,6 +8,7 @@
 import UIKit
 
 class RestaurantDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -25,7 +26,6 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
             cell.iconImageView.image = UIImage(systemName: "phone")?.withTintColor(.black, renderingMode: .alwaysOriginal)
             cell.shortTextLabel.text = restaurant.phone
             cell.selectionStyle = .none
-            print(indexPath.row)
             
             return cell
         // MARK: Implementation of Map row
@@ -34,7 +34,6 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
             cell.iconImageView.image = UIImage(systemName: "map")?.withTintColor(.black, renderingMode: .alwaysOriginal)
             cell.shortTextLabel.text = restaurant.location
             cell.selectionStyle = .none
-            print(indexPath.row)
             
             return cell
         // MARK: Implementation of Description row
@@ -42,7 +41,6 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RestaurantDetailTextCell.self), for: indexPath) as! RestaurantDetailTextCell
             cell.descriptionLabel.text = restaurant.description
             cell.selectionStyle = .none
-            print(indexPath.row)
             return cell
             
         default:
@@ -73,7 +71,14 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.tintColor = .white
         tableView.contentInsetAdjustmentBehavior = .never
+
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.hidesBarsOnSwipe = false
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        
+    }
 
 }
