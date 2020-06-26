@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class RestaurantTableViewController: UITableViewController {
 
     var restaurants:[Restaurant] = [
@@ -38,7 +39,6 @@ class RestaurantTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         tableView.cellLayoutMarginsFollowReadableWidth = true
         
         // Set to use the large title of the navigation bar
@@ -49,13 +49,14 @@ class RestaurantTableViewController: UITableViewController {
         navigationController?.navigationBar.largeTitleTextAttributes = [ NSAttributedString.Key.foregroundColor: UIColor(red: 231, green: 76, blue: 60), NSAttributedString.Key.font: customFont ]
             
         }
+        
     }
 
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         navigationController?.hidesBarsOnSwipe = true
+
     }
 
     // MARK: - Table view data source

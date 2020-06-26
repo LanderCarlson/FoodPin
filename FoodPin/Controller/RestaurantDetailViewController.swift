@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class RestaurantDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
 
     
@@ -75,10 +76,17 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         navigationController?.hidesBarsOnSwipe = false
         navigationController?.setNavigationBarHidden(false, animated: true)
-        
+        // Set navigation controllers bar style to white
+        navigationController?.makeStatusBarWhite()
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        // Reset navagation controllers barstyle to default
+        navigationController?.makeStatusBarDefault()
+    }
+    
 
 }
