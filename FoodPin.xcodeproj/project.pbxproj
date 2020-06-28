@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		C699C68824A46B91008C5B52 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C699C68724A46B91008C5B52 /* UIColor+Ext.swift */; };
 		C699C68A24A46DD5008C5B52 /* UINavigationController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C699C68924A46DD4008C5B52 /* UINavigationController+Ext.swift */; };
+		C6BDBC9B24A85E2200EEF523 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6BDBC9A24A85E2200EEF523 /* MapKit.framework */; };
+		C6BDBC9D24A8624600EEF523 /* RestaurantDetailSeperatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BDBC9C24A8624600EEF523 /* RestaurantDetailSeperatorCell.swift */; };
+		C6BDBC9F24A863A000EEF523 /* RestaurantDetailMapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BDBC9E24A863A000EEF523 /* RestaurantDetailMapCell.swift */; };
 		C6DB07DD249B2EB700BF4312 /* Rubik-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6DB07D2249B2EB700BF4312 /* Rubik-BoldItalic.ttf */; };
 		C6DB07DE249B2EB700BF4312 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = C6DB07D3249B2EB700BF4312 /* OFL.txt */; };
 		C6DB07DF249B2EB700BF4312 /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6DB07D4249B2EB700BF4312 /* Rubik-Bold.ttf */; };
@@ -37,6 +40,9 @@
 /* Begin PBXFileReference section */
 		C699C68724A46B91008C5B52 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		C699C68924A46DD4008C5B52 /* UINavigationController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Ext.swift"; sourceTree = "<group>"; };
+		C6BDBC9A24A85E2200EEF523 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C6BDBC9C24A8624600EEF523 /* RestaurantDetailSeperatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailSeperatorCell.swift; sourceTree = "<group>"; };
+		C6BDBC9E24A863A000EEF523 /* RestaurantDetailMapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailMapCell.swift; sourceTree = "<group>"; };
 		C6DB07D2249B2EB700BF4312 /* Rubik-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BoldItalic.ttf"; sourceTree = "<group>"; };
 		C6DB07D3249B2EB700BF4312 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		C6DB07D4249B2EB700BF4312 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
@@ -69,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6BDBC9B24A85E2200EEF523 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +89,14 @@
 				C699C68924A46DD4008C5B52 /* UINavigationController+Ext.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C6BDBC9924A85E2200EEF523 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C6BDBC9A24A85E2200EEF523 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		C6DB07D0249B2E2700BF4312 /* Resources */ = {
@@ -115,6 +130,7 @@
 			children = (
 				F4C333282365F91600D3A311 /* FoodPin */,
 				F4C333272365F91600D3A311 /* Products */,
+				C6BDBC9924A85E2200EEF523 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -167,6 +183,8 @@
 				C6DB07E8249B3AD400BF4312 /* RestaurantDetailHeaderView.swift */,
 				C6DB07EC249B473400BF4312 /* RestaurantDetailIconTextCell.swift */,
 				C6DB07EE249B48F400BF4312 /* RestaurantDetailTextCell.swift */,
+				C6BDBC9C24A8624600EEF523 /* RestaurantDetailSeperatorCell.swift */,
+				C6BDBC9E24A863A000EEF523 /* RestaurantDetailMapCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -269,6 +287,8 @@
 				F4C333442366EE5300D3A311 /* Restaurant.swift in Sources */,
 				C6DB07ED249B473400BF4312 /* RestaurantDetailIconTextCell.swift in Sources */,
 				C6DB07E9249B3AD400BF4312 /* RestaurantDetailHeaderView.swift in Sources */,
+				C6BDBC9D24A8624600EEF523 /* RestaurantDetailSeperatorCell.swift in Sources */,
+				C6BDBC9F24A863A000EEF523 /* RestaurantDetailMapCell.swift in Sources */,
 				F4C333422366DE1100D3A311 /* RestaurantDetailViewController.swift in Sources */,
 				C699C68824A46B91008C5B52 /* UIColor+Ext.swift in Sources */,
 				F4C3332C2365F91600D3A311 /* SceneDelegate.swift in Sources */,

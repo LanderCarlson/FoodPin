@@ -2,8 +2,20 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<true/>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string></string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleGetInfoString</key>
+	<string></string>
+	<key>CFBundleIconFile</key>
+	<string></string>
+	<key>CFBundleIconFiles</key>
+	<array>
+		<string></string>
+	</array>
 	<key>CFBundleIcons</key>
 	<dict>
 		<key>CFBundlePrimaryIcon</key>
@@ -21,16 +33,12 @@
 			<array>
 				<string></string>
 			</array>
-			<key>UINewsstandBindingType</key>
-			<string>UINewsstandBindingTypeMagazine</string>
 			<key>UINewsstandBindingEdge</key>
 			<string>UINewsstandBindingEdgeLeft</string>
+			<key>UINewsstandBindingType</key>
+			<string>UINewsstandBindingTypeMagazine</string>
 		</dict>
 	</dict>
-	<key>CFBundleDevelopmentRegion</key>
-	<string>$(DEVELOPMENT_LANGUAGE)</string>
-	<key>CFBundleExecutable</key>
-	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -41,10 +49,18 @@
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
+	<key>CFBundleSignature</key>
+	<string></string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>MKDirectionsApplicationSupportedModes</key>
+	<array/>
+	<key>NSHumanReadableCopyright</key>
+	<string></string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -68,22 +84,6 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
-	<key>LSApplicationCategoryType</key>
-	<string></string>
-	<key>CFBundleDisplayName</key>
-	<string></string>
-	<key>CFBundleGetInfoString</key>
-	<string></string>
-	<key>NSHumanReadableCopyright</key>
-	<string></string>
-	<key>CFBundleSignature</key>
-	<string></string>
-	<key>CFBundleIconFile</key>
-	<string></string>
-	<key>CFBundleIconFiles</key>
-	<array>
-		<string></string>
-	</array>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
@@ -101,5 +101,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<true/>
 </dict>
 </plist>
