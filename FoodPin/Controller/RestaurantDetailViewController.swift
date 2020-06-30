@@ -102,5 +102,13 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         navigationController?.makeStatusBarDefault()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowMap"{
+            let destinationController = segue.destination as! MapViewController
+            
+            destinationController.restaurant = restaurant
+        }
+    }
+    
 
 }
