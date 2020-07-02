@@ -42,7 +42,7 @@ class ReviewViewController: UIViewController {
         closeButton.transform = moveUpTransform
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         
         for index in 0...4 {
             UIView.animate(withDuration: 0.4, delay: (0.1 + 0.05 * Double(index)), options: [], animations: {
