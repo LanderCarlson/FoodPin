@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C67E69E124ADA2330036D818 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E69E024ADA2330036D818 /* ReviewViewController.swift */; };
 		C699C68824A46B91008C5B52 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C699C68724A46B91008C5B52 /* UIColor+Ext.swift */; };
 		C699C68A24A46DD5008C5B52 /* UINavigationController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C699C68924A46DD4008C5B52 /* UINavigationController+Ext.swift */; };
 		C6BDBC9B24A85E2200EEF523 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6BDBC9A24A85E2200EEF523 /* MapKit.framework */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C67E69E024ADA2330036D818 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		C699C68724A46B91008C5B52 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		C699C68924A46DD4008C5B52 /* UINavigationController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Ext.swift"; sourceTree = "<group>"; };
 		C6BDBC9A24A85E2200EEF523 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -167,6 +169,7 @@
 				F4C3333D2365FAF100D3A311 /* RestaurantTableViewController.swift */,
 				F4C333412366DE1100D3A311 /* RestaurantDetailViewController.swift */,
 				C6BDBCA024AB055400EEF523 /* MapViewController.swift */,
+				C67E69E024ADA2330036D818 /* ReviewViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 			files = (
 				C699C68A24A46DD5008C5B52 /* UINavigationController+Ext.swift in Sources */,
 				F4C33340236603E800D3A311 /* RestaurantTableViewCell.swift in Sources */,
+				C67E69E124ADA2330036D818 /* ReviewViewController.swift in Sources */,
 				C6DB07EF249B48F400BF4312 /* RestaurantDetailTextCell.swift in Sources */,
 				F4C3332A2365F91600D3A311 /* AppDelegate.swift in Sources */,
 				F4C333442366EE5300D3A311 /* Restaurant.swift in Sources */,
