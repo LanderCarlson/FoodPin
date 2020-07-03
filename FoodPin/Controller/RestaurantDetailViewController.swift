@@ -17,18 +17,31 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
     @IBAction func rateRestaurant(segue: UIStoryboardSegue) {
         dismiss(animated: true, completion: {
             if let rating = segue.identifier{
-                self.restaurant.rating = rating
-                self.headerView.ratingImageView.image = UIImage(named: rating)
+                // if restaurant.rating is the same as the users current selection remove the rating and animate
+                 if self.restaurant.rating == rating{
+                    self.restaurant.rating = ""
+                    
+                    // MARK: - fadeOut animation ratingImageView
+                    UIView.animate(withDuration: 0.6){
+                        self.headerView.ratingImageView.alpha = 0
+                    }
+                    
+                }else{
+                    //if the restaurant taing is different assign the image to the view and animate
+                    self.restaurant.rating = rating
+                    self.headerView.ratingImageView.image = UIImage(named: rating)
                 
-                let scaleTransform = CGAffineTransform.init(scaleX: 0.1, y: 0.1)
+                    let scaleTransform = CGAffineTransform.init(scaleX: 0.1, y: 0.1)
                 
-                self.headerView.ratingImageView.transform = scaleTransform
-                self.headerView.ratingImageView.alpha = 0
-                
-                UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 0.7, options: [], animations: {
-                    self.headerView.ratingImageView.transform = .identity
-                    self.headerView.ratingImageView.alpha = 1
-                }, completion: nil)
+                    self.headerView.ratingImageView.transform = scaleTransform
+                    self.headerView.ratingImageView.alpha = 0
+                    
+                    // MARK: - fade in animation ratingImageView
+                    UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 0.7, options: [], animations: {
+                        self.headerView.ratingImageView.transform = .identity
+                        self.headerView.ratingImageView.alpha = 1
+                    }, completion: nil)
+                }
             }
         })
     }
@@ -102,6 +115,7 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         headerView.typeLabel.text = restaurant.type
         headerView.headerImageView.image = UIImage(named: restaurant.image)
         headerView.heartImageView.isHidden = (restaurant.isVisited) ? false : true
+        headerView.ratingImageView.image = UIImage(named: restaurant.rating)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
@@ -117,6 +131,8 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         navigationController?.setNavigationBarHidden(false, animated: true)
         // Set navigation controllers bar style to white
         navigationController?.makeStatusBarWhite()
+        
+
     }
     
     override func viewWillDisappear(_ animated: Bool) {

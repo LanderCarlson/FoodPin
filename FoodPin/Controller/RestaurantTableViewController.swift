@@ -140,7 +140,6 @@ class RestaurantTableViewController: UITableViewController {
             let cell = tableView.cellForRow(at: indexPath) as! RestaurantTableViewCell
             self.restaurants[indexPath.row].isVisited = self.restaurants[indexPath.row].isVisited ? false : true
             cell.heartImageView.isHidden = self.restaurants[indexPath.row].isVisited ? false : true
-            
             completionHandler(true)
         }
         
