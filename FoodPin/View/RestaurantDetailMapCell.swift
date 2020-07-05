@@ -3,7 +3,6 @@
 //  FoodPin
 //
 //  Created by Adrian Koo on 28/06/20.
-//  Copyright © 2020 AppCoda. All rights reserved.
 //
 
 import UIKit
