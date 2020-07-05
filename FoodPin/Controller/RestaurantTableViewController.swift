@@ -164,6 +164,10 @@ class RestaurantTableViewController: UITableViewController {
             }
         }
     }
+    
+    @IBAction func unwindToHome(seuge: UIStoryboardSegue){
+        dismiss(animated: true, completion: nil)
+    }
 
 
 }
