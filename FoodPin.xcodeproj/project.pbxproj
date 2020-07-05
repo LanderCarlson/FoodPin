@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		C64E425D24B19A9800BECEDA /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64E425C24B19A9800BECEDA /* RoundedTextField.swift */; };
 		C64E425F24B19CB300BECEDA /* NewRestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64E425E24B19CB300BECEDA /* NewRestaurantTableViewController.swift */; };
-		C64E426124B1B0FC00BECEDA /* IDETemplateMacros.plist in Resources */ = {isa = PBXBuildFile; fileRef = C64E426024B1B0FC00BECEDA /* IDETemplateMacros.plist */; };
 		C67E69E124ADA2330036D818 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E69E024ADA2330036D818 /* ReviewViewController.swift */; };
 		C699C68824A46B91008C5B52 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C699C68724A46B91008C5B52 /* UIColor+Ext.swift */; };
 		C699C68A24A46DD5008C5B52 /* UINavigationController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C699C68924A46DD4008C5B52 /* UINavigationController+Ext.swift */; };
@@ -45,7 +44,6 @@
 /* Begin PBXFileReference section */
 		C64E425C24B19A9800BECEDA /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		C64E425E24B19CB300BECEDA /* NewRestaurantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRestaurantTableViewController.swift; sourceTree = "<group>"; };
-		C64E426024B1B0FC00BECEDA /* IDETemplateMacros.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = IDETemplateMacros.plist; sourceTree = "<group>"; };
 		C67E69E024ADA2330036D818 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		C699C68724A46B91008C5B52 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		C699C68924A46DD4008C5B52 /* UINavigationController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Ext.swift"; sourceTree = "<group>"; };
@@ -165,7 +163,6 @@
 				F4C3332B2365F91600D3A311 /* SceneDelegate.swift */,
 				F4C333322365F91800D3A311 /* Assets.xcassets */,
 				F4C333372365F91800D3A311 /* Info.plist */,
-				C64E426024B1B0FC00BECEDA /* IDETemplateMacros.plist */,
 			);
 			path = FoodPin;
 			sourceTree = "<group>";
@@ -241,7 +238,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1110;
 				LastUpgradeCheck = 1110;
-				ORGANIZATIONNAME = AppCoda;
+				ORGANIZATIONNAME = LanderCarlson;
 				TargetAttributes = {
 					F4C333252365F91600D3A311 = {
 						CreatedOnToolsVersion = 11.1;
@@ -278,7 +275,6 @@
 				F4C333362365F91800D3A311 /* LaunchScreen.storyboard in Resources */,
 				C6DB07DD249B2EB700BF4312 /* Rubik-BoldItalic.ttf in Resources */,
 				F4C333332365F91800D3A311 /* Assets.xcassets in Resources */,
-				C64E426124B1B0FC00BECEDA /* IDETemplateMacros.plist in Resources */,
 				C6DB07E3249B2EB700BF4312 /* Rubik-Italic.ttf in Resources */,
 				C6DB07E2249B2EB700BF4312 /* Rubik-Black.ttf in Resources */,
 				C6DB07E6249B2EB700BF4312 /* Rubik-BlackItalic.ttf in Resources */,
@@ -462,7 +458,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.appcoda.FoodPin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.LanderCarlson.FoodPin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -479,7 +475,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.appcoda.FoodPin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.LanderCarlson.FoodPin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
