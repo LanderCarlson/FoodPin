@@ -34,7 +34,24 @@ class RestaurantTableViewController: UITableViewController , NSFetchedResultsCon
         tableView.backgroundView = emptyRestaurantView
         tableView.backgroundView?.isHidden = true
         
-    }
+        let fetchRequest: NSFetchRequest<RestaurantMO> = RestaurantMO.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        if let appDelegate = (UIApplication.shared.delegate as? AppDelegate){
+            let context = appDelegate.persistentContainer.viewContext
+            fetchResultController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+            fetchResultController.delegate = self
+            do{
+                try fetchResultController.performFetch()
+                if let fetchedObjects = fetchResultController.fetchedObjects{
+                    restaurants = fetchedObjects
+                }
+            }catch{
+                print(error)
+            }
+        }
+        }
 
     
     override func viewWillAppear(_ animated: Bool) {
@@ -84,10 +101,12 @@ class RestaurantTableViewController: UITableViewController , NSFetchedResultsCon
     
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (action, sourceView, completionHandler) in
-            // Delete the row from the data source
-            self.restaurants.remove(at: indexPath.row)
-            
-            self.tableView.deleteRows(at: [indexPath], with: .fade)
+            if let appDelegate = (UIApplication.shared.delegate as? AppDelegate){
+                let context = appDelegate.persistentContainer.viewContext
+                let restaurantToDelete = self.fetchResultController.object(at: indexPath)
+                context.delete(restaurantToDelete)
+                appDelegate.saveContext()
+            }
             
             // Call completion handler with true to indicate
             completionHandler(true)
@@ -144,7 +163,6 @@ class RestaurantTableViewController: UITableViewController , NSFetchedResultsCon
         
         let swipeConfiguration = UISwipeActionsConfiguration(actions: [checkInAction])
         
-        
         return swipeConfiguration
     }
     
@@ -162,6 +180,36 @@ class RestaurantTableViewController: UITableViewController , NSFetchedResultsCon
     
     @IBAction func unwindToHome(seuge: UIStoryboardSegue){
         dismiss(animated: true, completion: nil)
+    }
+    
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.beginUpdates()
+    }
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        switch type{
+        case .insert:
+            if let newIndexPath = newIndexPath{
+                tableView.insertRows(at: [newIndexPath], with: .fade)
+            }
+        case .delete:
+            if let indexPath = indexPath{
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            }
+        case .update:
+            if let indexPath = indexPath{
+                tableView.reloadRows(at: [indexPath], with: .fade)
+            }
+        default:
+            tableView.reloadData()
+        }
+        if let fetchedObjects = controller.fetchedObjects{
+            restaurants = fetchedObjects as! [RestaurantMO]
+        }
+    }
+    
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.endUpdates()
     }
 
 

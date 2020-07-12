@@ -23,6 +23,10 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
                  if self.restaurant.rating == rating{
                     self.restaurant.rating = ""
                     
+                    if let appDelegate = (UIApplication.shared.delegate as? AppDelegate){
+                        appDelegate.saveContext()
+                    }
+                    
                     // MARK: - fadeOut animation ratingImageView
                     UIView.animate(withDuration: 0.6){
                         self.headerView.ratingImageView.alpha = 0
@@ -32,6 +36,10 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
                     //if the restaurant taing is different assign the image to the view and animate
                     self.restaurant.rating = rating
                     self.headerView.ratingImageView.image = UIImage(named: rating)
+                    
+                    if let appDelegate = (UIApplication.shared.delegate as? AppDelegate){
+                        appDelegate.saveContext()
+                    }
                 
                     let scaleTransform = CGAffineTransform.init(scaleX: 0.1, y: 0.1)
                 
@@ -78,7 +86,7 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         // MARK: Implementation of Description row
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RestaurantDetailTextCell.self), for: indexPath) as! RestaurantDetailTextCell
-            cell.descriptionLabel.text = restaurant.description
+            cell.descriptionLabel.text = restaurant.summary
             cell.selectionStyle = .none
             
             return cell
@@ -122,8 +130,10 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         }
         headerView.heartImageView.isHidden = (restaurant.isVisited) ? false : true
         
-        // MARK: - FORCED UNWRAPPING OF RESTAURANT RATING
-        headerView.ratingImageView.image = UIImage(named: restaurant.rating!)
+        // MARK: - unwrapping of rating
+        if let restaurantRating = restaurant.rating{
+                    headerView.ratingImageView.image = UIImage(named: restaurantRating)
+        }
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none

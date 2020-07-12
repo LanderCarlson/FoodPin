@@ -168,7 +168,6 @@ class NewRestaurantTableViewController: UITableViewController, UITextFieldDelega
             restaurant.phone = phoneTextField.text
             restaurant.summary = descriptionTextView.text
             restaurant.isVisited = false
-            
             if let restaurantImage = photoImageView.image{
                 restaurant.image = restaurantImage.pngData()
             }
